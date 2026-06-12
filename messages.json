@@ -1,6 +1,32 @@
-[{
-    "Sender": "+2761476721",
-    "Message": "hii",
-    "Recipient": "+276167261718",
-    "MessageID": "MSG1"
-}]
+[
+    {
+        "Sender": "+2761476721",
+        "Message": "hii",
+        "Recipient": "+276167261718",
+        "MessageID": "MSG1"
+    },
+    {
+        "Sender": "+27712897800",
+        "Message": "hi nthabi how are you",
+        "Recipient": "+27733501410",
+        "MessageID": "MSG1"
+    },
+    {
+        "Sender": "+27712897800",
+        "Message": "hi",
+        "Recipient": "+2773501410",
+        "MessageID": "MSG2"
+    },
+    {
+        "Sender": "+27614767216",
+        "Message": "kgg",
+        "Recipient": "+27733501410",
+        "MessageID": "38d02c30-f034-44ba-a083-87ee4f016eb8"
+    },
+    {
+        "Sender": "+27614767216",
+        "Message": "bh",
+        "Recipient": "+27733501410",
+        "MessageID": "fa92820b-2a2c-45a3-82e7-b79b9c52ad5e"
+    }
+]

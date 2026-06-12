@@ -3,13 +3,20 @@
  * Student Number: ST10503321
  * Module: PROG5121
  * POE Part 2 – VOX808
- * Description: Combines Part 1 registration/login validation with Part 2 messaging system.
+ * Description: Combines Part 1 registration/login validation with Part 2 messaging system and Part 3 reporting.
  */
 package poepart2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainApp {
+    private static List<Message> allMessages = new ArrayList<>();
+    private static int sentCount = 0;
+    private static int storedCount = 0;
+    private static int deletedCount = 0;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         FileHandler fh = new FileHandler();
@@ -69,16 +76,23 @@ public class MainApp {
 
                                 Message msg = new Message(phoneNumber, recipientPhone, content);
                                 fh.saveMessage(msg);
+                                allMessages.add(msg);
+                                sentCount++;
                             }
 
                             System.out.println("\nAll messages sent successfully!");
+                            ReportManager.displayAllMessages(allMessages);
+                            ReportManager.showSummary(sentCount, storedCount, deletedCount);
 
                         } else if (subChoice == 2) {
                             fh.showMessages();
+                            ReportManager.displayAllMessages(allMessages);
+                            ReportManager.showSummary(sentCount, storedCount, deletedCount);
 
                         } else if (subChoice == 3) {
                             System.out.println("Logged out successfully.");
                             break;
+
                         } else {
                             System.out.println("Invalid choice. Try again.");
                         }
